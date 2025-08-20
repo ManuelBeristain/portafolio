@@ -134,18 +134,19 @@ article.about {
     font-size: 23px;
 }
 
-article.knowledge {
+article.experience {
     width: 70%;
     margin: 0px auto;
     margin-bottom: 20px;
     font-size: 23px;
 }
 
-article.experience {
-    width: 70%;
-    margin: 0px auto;
+.portfolio {
     margin-bottom: 20px;
     font-size: 23px;
+    margin-left: 50px;
+    margin-right: 50px;
+    
 }
 
 .about h2 {
@@ -154,7 +155,7 @@ article.experience {
     margin-bottom: 5px;
 }
 
-.knowledge h2 {
+.portfolio h2 {
     border-bottom: 1px solid #ccc;
     padding-bottom: 5px;
     margin-bottom: 5px;
@@ -171,6 +172,8 @@ article.experience {
     padding-bottom: 30px;
     text-align: justify;
 }
+
+
 
 .experience h2 {
     border-bottom: 1px solid #ccc;
@@ -202,6 +205,49 @@ article.experience {
 .activity {
   text-indent: -1.5em;       /* Mueve la viñeta hacia la izquierda */
   padding-left: 1.5em;       /* Mueve el texto a la derecha, alineándolo con el texto superior */
+}
+
+/* Estilos para el contenedor de la cuadrícula */
+.image-grid {
+    display: grid;
+    /* Define 3 columnas de igual tamaño, espaciadas por 20px */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; /* Espacio entre las celdas de la cuadrícula */
+    margin-top: 30px;
+   
+}
+
+/* Estilos para cada elemento de la cuadrícula */
+.grid-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga de los bordes redondeados */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Añade una transición para el efecto hover */
+}
+
+/* Efecto al pasar el ratón sobre un elemento */
+.grid-item:hover {
+    transform: translateY(-5px); /* Se mueve ligeramente hacia arriba */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para la imagen */
+.grid-item img {
+    width: 100%; /* La imagen ocupará todo el ancho de su contenedor */
+    height: 200px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+    display: block;
+}
+
+/* Estilos para el texto */
+.grid-item p {
+    padding: 10px;
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
 }
 
 
@@ -304,10 +350,11 @@ form input[type='submit']:hover {
         font-size: 18px;
     }
 
-    article.knowledge {
+    article.portfolio {
         width: 90%;
         font-size: 18px;
     }
+
 }
 
 @media (max-width: 768px) {
@@ -353,6 +400,14 @@ form input[type='submit']:hover {
     margin: 120px auto 70px auto; /* ⬅️ este 120px empuja el bloque hacia abajo */
     text-align: center;
     }
+
+    .portfolio {
+    width: 70%;
+    margin: 120px auto 20px auto; /* ⬅️ este 120px empuja el bloque hacia abajo */
+    text-align: left;
+    padding-bottom: 30px;
+    }    
+
 
     #title h2 {
         font-size: 25px;
