@@ -304,6 +304,36 @@ form input[type='submit']:hover {
     cursor: pointer;
 }
 
+/* ESTILOS SOCIAL MEDIA */
+.social-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-links img {
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover img {
+    transform: scale(1.1);
+}
+
+/* Foto de perfil */
+.profile-picture {
+    text-align: center; /* Centra la imagen dentro del div */
+    margin-bottom: 20px; /* Espacio debajo de la foto */
+}
+
+.profile-img {
+    width: 200px; /* Tamaño de la imagen, ajusta según necesites */
+    height: 200px; /* Mismo ancho y alto para hacerla redonda */
+    border-radius: 50%; /* Hace que la imagen sea completamente redonda */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    border: 3px solid #007bff; /* Un borde sutil*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
+}
+
 /* ------------------------- */
 /* ESTILOS RESPONSIVE MOBILE */
 /* ------------------------- */
